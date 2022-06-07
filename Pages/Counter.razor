@@ -1,0 +1,78 @@
+﻿@page "/cadastrarimovel"
+
+
+
+<h1>Cadastro de Novo Imóvel</h1>
+
+
+<EditForm Model="_imovel" OnValidSubmit="Cadastrar">
+    <p>
+        <label>ID</label>
+        <InputNumber  @bind-Value="_imovel.Id"></InputNumber>
+    </p>
+    <p>
+        <label>Tipo do Imóvel</label>
+        <InputText @bind-Value="_imovel.TipoImovel"></InputText>
+    </p>
+    <p>
+        <label>Valor de Venda</label>
+        <InputNumber @bind-Value="_imovel.ValorVenda"></InputNumber>
+    </p>
+    <p>
+        <label>Valor de Locação</label>
+        <InputNumber @bind-Value="_imovel.ValorLocacao"></InputNumber>
+    </p>
+    <p>
+        <label>Área Construída</label>
+        <InputNumber @bind-Value="_imovel.Area"></InputNumber>
+    </p>
+    <p>
+        <label>Endereço</label>
+        <InputText @bind-Value="_imovel.Endereco"></InputText>
+    </p>
+    <p>
+        <label>Número</label>
+        <InputNumber @bind-Value="_imovel.Numero"></InputNumber>
+    </p>
+    <p>
+        <label>Complemento</label>
+        <InputText @bind-Value="_imovel.Complemento"></InputText>
+    </p>
+    <p>
+        <label>Bairro</label>
+        <InputText @bind-Value="_imovel.Bairro"></InputText>
+    </p>
+    <p>
+        <label>Cidade</label>
+        <InputText @bind-Value="_imovel.Cidade"></InputText>
+    </p>
+    <p>
+        <label>CEP</label>
+        <InputNumber @bind-Value="_imovel.Cep"></InputNumber>
+    </p>
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <button type="submit">Cadastrar Imóvel</button>
+
+</EditForm>
+
+
+
+@if (_sucess)
+{
+    <div class="text-sucess">
+        Imóvel Cadastrado com Sucesso!!!
+    </div>
+}
+
+@code{
+        private Imovel _imovel = new Imovel();
+    private bool _sucess = false;
+
+    private async Task Cadastrar()
+    {
+
+        _sucess = true;
+
+    }
+    }

@@ -1,0 +1,62 @@
+﻿@page "/imoveis"
+
+@using teste.Data
+@inject BuscaImoveis PedidosService
+
+
+
+@if (pedidos == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+   <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th> 
+                <th>Tipo de Imovel</th>
+                <th>Valor de Venda</th>
+                <th>Valor de Locação</th>
+                <th>Área</th> 6.
+                <th>Endereço</th>
+                <th>Número</th>
+                <th>Complemento</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>CEP</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pedido in pedidos)
+            {
+                <tr>
+                    <td>@pedido.Id</td>
+                    <td>@pedido.TipoImovel</td>
+                    <td>@pedido.ValorVenda</td>
+                    <td>@pedido.ValorLocacao</td>
+                    <td>@pedido.Area</td>
+                    <td>@pedido.Endereco</td>
+                    <td>@pedido.Numero</td>
+                    <td>@pedido.Complemento</td>
+                    <td>@pedido.Bairro</td>
+                    <td>@pedido.Cidade</td>
+                    <td>@pedido.Cep</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+
+    private List<ListaImoveis> pedidos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        pedidos = await PedidosService.GetOrders();
+
+    }
+
+
+}

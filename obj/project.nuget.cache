@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "5aByG4QX72qKcY91AcY4w/vCTsZkgzeFEAr4RtC7YsaREjbGE8AM83oUIBQIl8TUtjEOfSDbVm9/e2Uj9iIuPQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\caiohenrique\\source\\repos\\teste\\teste.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\caiohenrique\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
+    "C:\\Users\\caiohenrique\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\caiohenrique\\.nuget\\packages\\restsharp\\107.3.0\\restsharp.107.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
